@@ -10,8 +10,17 @@
             <div class="row row-col-2 mt-5">
                 <h2 class="text-center mb-5">Omelette aux épinards</h2>
                 <div class="col">
-                    <img class="w-100 rounded mb-4" src="/Images/OmeletteAuxEpinards.PNG"
-                        alt="image omelette aux épinards">
+                    <div class="image-card text-white">
+                        <img class="w-100 rounded mb-4" src="/Images/OmeletteAuxEpinards.PNG"
+                            alt="image omelette aux épinards">
+                        <p class="titre-image">Omelette aux épinards</p>
+                        <div class="action-image-buttons">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                                data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                                data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6 ms-5 ">
                     <h4>Ingrédients :</h4>
@@ -65,5 +74,61 @@
             </div>
         </div>
     </article>
+
+    <!-- Modal Edition-->
+    <div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition photo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="NamePhotoInput" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="NamePhotoInput"
+                                placeholder="omelette aux épinards">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ImageInput" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="ImageInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Suppression-->
+    <div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Etes-vous sûr de vouloir supprimer cette
+                        photo ?</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="NamePhotoInput" class="form-label">Titre</label>
+                            <img src="/Images/OmeletteAuxEpinards.PNG" class="rounded w-100" alt="#">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-danger">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </section>
